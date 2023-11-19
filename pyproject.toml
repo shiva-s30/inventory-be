@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "inventory-be"
 version = "0.1.0"
-description = "inventory-be is backend project using FastAPI for API development"
+description = "inventory-be is backend project for inventory management using FastAPI for API development"
 authors = ["shiva-s30 <shivasrisailam1999@gmail.com>"]
 readme = "README.md"
 packages = [{include = "inventory"}]
