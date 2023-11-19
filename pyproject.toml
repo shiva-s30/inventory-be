@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "inventory-be"
 version = "0.1.0"
-description = "inventory.be is backend project using FastAPI for API development"
+description = "inventory-be is backend project using FastAPI for API development"
 authors = ["shiva-s30 <shivasrisailam1999@gmail.com>"]
 readme = "README.md"
 packages = [{include = "inventory"}]
@@ -11,6 +11,7 @@ python = "^3.10"
 poetry = "^1.7.1"
 uvicorn = "^0.24.0.post1"
 alembic = "^1.12.1"
+fastapi = "^0.104.1"
 
 
 [tool.poetry.group.dev.dependencies]
