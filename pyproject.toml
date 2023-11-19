@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "inventory-be"
+version = "0.1.0"
+description = "inventory.be is backend project using FastAPI for API development"
+authors = ["shiva-s30 <shivasrisailam1999@gmail.com>"]
+readme = "README.md"
+packages = [{include = "inventory"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+poetry = "^1.7.1"
+uvicorn = "^0.24.0.post1"
+alembic = "^1.12.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+requests = "^2.31.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
