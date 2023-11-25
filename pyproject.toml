@@ -12,6 +12,7 @@ poetry = "^1.7.1"
 uvicorn = "^0.24.0.post1"
 alembic = "^1.12.1"
 fastapi = "^0.104.1"
+sqlalchemy = "^2.0.23"
 
 
 [tool.poetry.group.dev.dependencies]
