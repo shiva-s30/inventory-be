@@ -5,7 +5,7 @@ from .database import SqlBaseModel
 
 
 class User(SqlBaseModel):
-    # creating table with "users" as tablename in the database 
+    # creating table with "users" as tablename in the database
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -16,7 +16,7 @@ class User(SqlBaseModel):
 
 
 class Item(SqlBaseModel):
-    # creating table with "items" as tablename in the database 
+    # creating table with "items" as tablename in the database
     __tablename__ = "items"
 
     # creating various columns in the databases
@@ -25,4 +25,3 @@ class Item(SqlBaseModel):
     description = Column(String, index=True)
     owner_id = Column(Integer, ForeignKey("users.id"))
     owner = relationship("User", back_populates="items")
-
