@@ -1,6 +1,7 @@
 from typing import Union
 from pydantic import BaseModel as PydBaseModel
 
+
 class Item(PydBaseModel):
     id: int
     owner_id: int
