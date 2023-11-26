@@ -16,6 +16,8 @@ class User(PydBaseModel):
     id: int
     is_active: bool
     items: list[Item] = []
+    email: str
+    password: str
 
     class Config:
         orm_mode = True
