@@ -62,21 +62,20 @@ def get_user(user_id: int, db: Session = Depends(get_db)):
 
 
 @app.get("/users/", response_model=list[schema.User])
-def get_all_users(skip: int = 0, limit: int = 100,
-                  db: Session = Depends(get_db)):
+def get_all_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     db_users = crud.get_users(db=db, skip=skip, limit=limit)
     return db_users
 
 
 @app.post("/items/", response_model=schema.Item)
-def create_user_item(user_id: int, item: schema.ItemCreate,
-                     db: Session = Depends(get_db)):
+def create_user_item(
+    user_id: int, item: schema.ItemCreate, db: Session = Depends(get_db)
+):
     db_user_item = crud.create_user_item(db=db, item=item, user_id=user_id)
     return db_user_item
 
 
 @app.get("/items/", response_model=list[schema.Item])
-def get_all_items(skip: int = 0, limit: int = 100,
-                  db: Session = Depends(get_db)):
+def get_all_items(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     db_items = crud.get_items(db=db, skip=skip, limit=limit)
     return db_items
